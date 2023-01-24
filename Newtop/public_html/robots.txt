@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /webdev
+Disallow: /webdev/design1/
+Disallow: /webdev/design2/
+Disallow: /webdev/design3/
+Disallow: /index-2.html/
+Disallow: /employess.html/
