@@ -1,6 +1,11 @@
 <?php
+$my_arr = array(1,2,3);
+echo '<script>';
+echo 'console.log('. json_encode($my_arr, JSON_HEX_TAG) .')';
+echo '</script>';
+if(!$_POST) {
 
-if(!$_POST) exit;
+	exit};
 
 $email = $_POST['email'];
 
