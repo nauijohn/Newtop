@@ -65,6 +65,7 @@
       // <![CDATA[
       jQuery(document).ready(function () {
         $("#contactform").submit(function () {
+          console.log("TEST");
           var action = $(this).attr("action");
           $.post(
             action,
