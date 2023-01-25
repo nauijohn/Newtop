@@ -28,7 +28,7 @@ else{
 	$values = array ('name','email','message');
 	$required = array('name','email','message');
 	 
-	$your_email = "jano_naui@yahoo.com,newtop_corporation@yahoo.com";
+	$your_email = "jano_naui@yahoo.com,newtop_corporation@yahoo.com,admin@newtopcorp.com";
 	$email_subject = "NEWTOP CONTACT FORM INQUIRY ".$_POST['subject'];
 	$email_content = "Message:\n";
 	
