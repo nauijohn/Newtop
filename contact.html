@@ -67,6 +67,13 @@
         $("#contactform").submit(function () {
           console.log("TEST");
           var action = $(this).attr("action");
+          /* console.log("action: ", action);
+          console.log("data: ", {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            subject: $("#subject").val(),
+            message: $("#message").val(),
+          }); */
           $.post(
             action,
             {
@@ -76,6 +83,8 @@
               message: $("#message").val(),
             },
             function (data) {
+              /* console.log("TEST2");
+              console.log("data: ", data); */
               $("#contactform #submit").attr("disabled", "");
               $(".response").remove();
               $("#contactform").before('<p class="response">' + data + "</p>");
