@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="" />
@@ -14,38 +15,54 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/superfish.css" rel="stylesheet" type="text/css" />
     <!--[if IE 6]>
-      <link href="css/ie6.css" rel="stylesheet" type="text/css" />
-      <script type="text/javascript" src="js/DD_belatedPNG.js"></script>
-      <script type="text/javascript">
-        DD_belatedPNG.fix("#top");
-        DD_belatedPNG.fix("img");
-        DD_belatedPNG.fix(".desc");
-        DD_belatedPNG.fix(".news-spacer");
-      </script>
-    <![endif]-->
+			<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+			<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix("#top");
+				DD_belatedPNG.fix("img");
+				DD_belatedPNG.fix(".desc");
+				DD_belatedPNG.fix(".news-spacer");
+			</script>
+		<![endif]-->
     <!--[if IE 7]>
-      <style type="text/css">
-        #content-inner {
-          padding-top: 45px;
-        }
-        #search .go {
-          margin: 4px 0 0 -24px;
-        }
-      </style>
-    <![endif]-->
+			<style type="text/css">
+				#content-inner {
+					padding-top: 45px;
+				}
+				#search .go {
+					margin: 4px 0 0 -24px;
+				}
+			</style>
+		<![endif]-->
     <!--[if IE 8]>
-      <style type="text/css">
-        #search .go {
-          margin: 4px 0 0 -24px;
-        }
-      </style>
-    <![endif]-->
+			<style type="text/css">
+				#search .go {
+					margin: 4px 0 0 -24px;
+				}
+			</style>
+		<![endif]-->
     <style type="text/css" media="screen,projection">
-      <!--
-      fieldset { border:0;margin:0;padding:0; }
-      label {  padding-right:15px; float:left; width:70px;}
-      input.text{ width:290px;font:12px/12px 'courier new',courier,monospace;color:#333;padding:3px;margin:1px 0; }
-      -->
+        <!-- fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        label {
+            padding-right: 15px;
+            float: left;
+            width: 70px;
+        }
+        
+        input.text {
+            width: 290px;
+            font: 12px/12px 'courier new', courier, monospace;
+            color: #333;
+            padding: 3px;
+            margin: 1px 0;
+        }
+        
+        -->
     </style>
 
     <!-- ////////////////////////////////// -->
@@ -56,319 +73,365 @@
     <script type="text/javascript" src="js/functionAddEvent.js"></script>
     <script type="text/javascript" src="js/superfish.js"></script>
     <script type="text/javascript">
-      // initialise plugins
-      jQuery(function () {
-        jQuery("ul.sf-menu").superfish();
-      });
+        // initialise plugins
+        jQuery(function() {
+            jQuery("ul.sf-menu").superfish();
+        });
     </script>
     <script type="text/javascript">
-      // <![CDATA[
-      jQuery(document).ready(function () {
-        $("#contactform").submit(function () {
-          console.log("TEST");
-          var action = $(this).attr("action");
-          /* console.log("action: ", action);
-          console.log("data: ", {
-            name: $("#name").val(),
-            email: $("#email").val(),
-            subject: $("#subject").val(),
-            message: $("#message").val(),
-          }); */
-          $.post(
-            action,
-            {
-              name: $("#name").val(),
-              email: $("#email").val(),
-              subject: $("#subject").val(),
-              message: $("#message").val(),
-            },
-            function (data) {
-              /* console.log("TEST2");
-              console.log("data: ", data); */
-              $("#contactform #submit").attr("disabled", "");
-              $(".response").remove();
-              $("#contactform").before('<p class="response">' + data + "</p>");
-              $(".response").slideDown();
-              if (
-                data ==
-                "Your Message has been sent! Thank You for contacting us!"
-              )
-                $("#contactform").slideUp();
-            }
-          );
-          return false;
+        // <![CDATA[
+        jQuery(document).ready(function() {
+            $("#contactform").submit(function() {
+                console.log("TEST");
+                var action = $(this).attr("action");
+                /* console.log("action: ", action);
+                console.log("data: ", {
+                  name: $("#name").val(),
+                  email: $("#email").val(),
+                  subject: $("#subject").val(),
+                  message: $("#message").val(),
+                }); */
+                $.post(
+                    action, {
+                        name: $("#name").val(),
+                        email: $("#email").val(),
+                        subject: $("#subject").val(),
+                        message: $("#message").val(),
+                    },
+                    function(data) {
+                        /* console.log("TEST2");
+                        console.log("data: ", data); */
+                        $("#contactform #submit").attr("disabled", "");
+                        $(".response").remove();
+                        $("#contactform").before(
+                            '<p class="response">' + data + "</p>"
+                        );
+                        $(".response").slideDown();
+                        if (
+                            data ==
+                            "Your Message has been sent! Thank You for contacting us!"
+                        )
+                            $("#contactform").slideUp();
+                    }
+                );
+                return false;
+            });
         });
-      });
-      // ]]>
+        // ]]>
     </script>
-    <script
-      type="text/javascript"
-      src="https://goo.gl/maps/ZWLMnQAqgbGbCjrZA"
-    ></script>
+    <script type="text/javascript" src="https://goo.gl/maps/ZWLMnQAqgbGbCjrZA"></script>
     <script type="text/javascript" src="js/jquery.gmap-1.0.3-min.js"></script>
     <script type="text/javascript">
-      $(function () {
-        $("#map").gMap({
-          controls: false,
-          scrollwheel: false,
-          markers: [{ latitude: 14.47098, longitude: 120.99855 }],
-          zoom: 15,
+        $(function() {
+            $("#map").gMap({
+                controls: false,
+                scrollwheel: false,
+                markers: [{
+                    latitude: 14.47098,
+                    longitude: 120.99855,
+                }, ],
+                zoom: 15,
+            });
         });
-      });
     </script>
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/Telegrafico_400.font.js"></script>
     <script type="text/javascript">
-      Cufon.replace("h1")("h2")("h3")("h4")("h5");
+        Cufon.replace("h1")("h2")("h3")("h4")("h5");
     </script>
-  </head>
-  <body>
-    <div id="outer-container2">
-      <div id="inner-container2">
-        <!-- BEGIN HEADER -->
-        <div id="header-inner">
-          <div id="top">
-            <div id="nav-menu">
-              <ul class="sf-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li>
-                  <a href="services.html">Services</a>
-                  <ul class="subnav">
-                    <li><a href="forklift_rental.html">Forklift Rental</a></li>
-                    <li>
-                      <a href="forklifts_transport&delivery.html"
-                        >Forklift Transport & Delivery</a
-                      >
-                    </li>
-                    <li>
-                      <a href="cargo_loading&unloading.html"
-                        ><span>Cargo Loading & Unloading</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="packing&crating.html"
-                        ><span>Packing & Crating</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="machine_spotting&positioning.html"
-                        ><span>Machine Spotting & Positioning</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="equipments.html">Equipments</a>
-                  <ul class="subnav">
-                    <li>
-                      <a href="forklifts.html"><span>Forklifts</span></a>
-                    </li>
-                    <li>
-                      <a href="trucks.html"><span>Trucks</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="employees.html">Our Employees</a>
-                  <ul class="subnav">
-                    <li>
-                      <a href="management.html"><span>Management</span></a>
-                    </li>
-                    <li>
-                      <a href="operators.html"
-                        ><span>Operators/Helpers</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="drivers.html"><span>Drivers/Helpers</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="current"><a href="contact.html">Contact Us</a></li>
-              </ul>
-            </div>
-            <div id="search-box"></div>
-            <div id="logo">
-              <a href="index.html"><img src="images/logo.png" alt="" /></a>
-            </div>
-          </div>
-          <div id="sitemap">
-            <strong>You are here</strong> :
-            <a href="index.html">Home</a> &raquo; Contact
-          </div>
-        </div>
-        <!-- END OF HEADER -->
+</head>
 
-        <!-- BEGIN CONTENT -->
-        <div id="content-inner">
-          <div class="maincontent-inner">
-            <h3>Where to find Us</h3>
-            <div id="map"></div>
-            <!--
+<body>
+    <div id="outer-container2">
+        <div id="inner-container2">
+            <!-- BEGIN HEADER -->
+            <div id="header-inner">
+                <div id="top">
+                    <div id="nav-menu">
+                        <ul class="sf-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li>
+                                <a href="services.html">Services</a>
+                                <ul class="subnav">
+                                    <li>
+                                        <a href="forklift_rental.html">Forklift Rental</a
+											>
+										</li>
+										<li>
+											<a
+												href="forklifts_transport&delivery.html"
+												>Forklift Transport &
+												Delivery</a
+											>
+										</li>
+										<li>
+											<a
+												href="cargo_loading&unloading.html"
+												><span
+													>Cargo Loading &
+													Unloading</span
+												></a
+											>
+										</li>
+										<li>
+											<a href="packing&crating.html"
+												><span
+													>Packing & Crating</span
+												></a
+											>
+										</li>
+										<li>
+											<a
+												href="machine_spotting&positioning.html"
+												><span
+													>Machine Spotting &
+													Positioning</span
+												></a
+											>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="equipments.html">Equipments</a>
+                                        <ul class="subnav">
+                                            <li>
+                                                <a href="forklifts.html"><span>Forklifts</span></a
+											>
+										</li>
+										<li>
+											<a href="trucks.html"
+												><span>Trucks</span></a
+											>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="employees.html">Our Employees</a>
+                                                <ul class="subnav">
+                                                    <li>
+                                                        <a href="management.html"><span>Management</span></a
+											>
+										</li>
+										<li>
+											<a href="operators.html"
+												><span
+													>Operators/Helpers</span
+												></a
+											>
+										</li>
+										<li>
+											<a href="drivers.html"
+												><span>Drivers/Helpers</span></a
+											>
+										</li>
+									</ul>
+								</li>
+								<li class="current">
+									<a href="contact.html">Contact Us</a>
+                                                    </li>
+                                                </ul>
+                    </div>
+                    <div id="search-box"></div>
+                    <div id="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <div id="sitemap">
+                    <strong>You are here</strong> :
+                    <a href="index.html">Home</a> &raquo; Contact
+                </div>
+            </div>
+            <!-- END OF HEADER -->
+
+            <!-- BEGIN CONTENT -->
+            <div id="content-inner">
+                <div class="maincontent-inner">
+                    <h3>Where to find Us</h3>
+                    <div id="map"></div>
+                    <!--
                 <small>
                     <a href="http://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=Las+Pi%C3%B1as,+Philippines&amp;daddr=14.470977,120.998584&amp;hl=en&amp;geocode=&amp;mra=ls&amp;sll=14.47098,120.99855&amp;sspn=0.001382,0.002411&amp;ie=UTF8&amp;ll=14.470957,120.998587&amp;spn=0.001382,0.002411"
                     style="color: #0000ff; text-align: left">View Larger Map</a>
                 </small>
             -->
-            <br />
-            <br />
-            <p>
-              We are glad to quote on your requirements. We guarantee service
-              satisfaction and best price in town. Please don't hesitate to call
-              us via our landline or give us an email.
-            </p>
-            <h4>
-              Contact Form<a name="quote" id="quote"></a> &#8211; Request For A
-              Quote
-            </h4>
-            <div class="form-box-top"></div>
-            <div class="form-box">
-              <div id="contactFormArea">
-                <form action="contact.php" method="post" id="contactform">
-                  <fieldset>
-                    <div id="form-left">
-                      <label for="name">Name</label><br />
-                      <input
-                        class="input"
-                        type="text"
-                        size="25"
-                        name="name"
-                        id="name"
-                      /><br /><br />
-                      <label for="email">Email</label><br />
-                      <input
-                        class="input"
-                        type="text"
-                        size="25"
-                        name="email"
-                        id="email"
-                      /><br /><br />
-                      <label for="subject">Subject</label><br />
-                      <input
-                        class="input"
-                        type="text"
-                        size="25"
-                        name="subject"
-                        id="subject"
-                      /><br /><br />
-                      <!-- Success Message -->
-                      <p id="loadBar" style="display: none">
-                        <span class="loading-text"
-                          >Sending Email. Hold on just a sec&#8230;</span
-                        >
-                        <span class="loading-form">&nbsp;</span>
-                      </p>
-                      <p id="emailSuccess" style="display: none">
-                        <strong style="color: #797979"
-                          >Success! Your Email has been sent.</strong
-                        >
-                      </p>
-                      <!-- End of Success Message -->
+                    <br />
+                    <br />
+                    <p>
+                        We are glad to quote on your requirements. We guarantee service satisfaction and best price in town. Please don't hesitate to call us via our landline or give us an email.
+                    </p>
+                    <h4>
+                        Contact Form
+                        <a name="quote" id="quote"></a> &#8211; Request For A Quote
+                    </h4>
+                    <div class="form-box-top"></div>
+                    <div class="form-box">
+                        <div id="contactFormArea">
+                            <form action="contact.php" method="post" id="contactform">
+                                <fieldset>
+                                    <div id="form-left">
+                                        <label for="name">Name</label><br />
+                                        <input class="input" type="text" size="25" name="name" id="name" /><br /><br />
+                                        <label for="email">Email</label
+											><br />
+											<input
+												class="input"
+												type="text"
+												size="25"
+												name="email"
+												id="email"
+											/><br /><br />
+											<label for="subject">Subject</label
+											><br />
+											<input
+												class="input"
+												type="text"
+												size="25"
+												name="subject"
+												id="subject"
+											/><br /><br />
+											<!-- Success Message -->
+											<p
+												id="loadBar"
+												style="display: none"
+											>
+												<span class="loading-text"
+													>Sending Email. Hold on just
+													a sec&#8230;</span
+												>
+												<span class="loading-form"
+													>&nbsp;</span
+												>
+											</p>
+											<p
+												id="emailSuccess"
+												style="display: none"
+											>
+												<strong style="color: #797979"
+													>Success! Your Email has
+													been sent.</strong
+												>
+											</p>
+											<!-- End of Success Message -->
+										</div>
+										<div id="form-right">
+											<label for="message">Message</label
+											><br />
+											<textarea
+												cols="50"
+												name="message"
+												rows=""
+												id="message"
+												class="textarea"
+											></textarea
+											><br /><br />
+											<label for="selfCC">
+												<!--<input type="checkbox" name="selfCC" id="selfCC" value="send" /> Send CC to self-->
+												<input
+													type="hidden"
+													name="selfCC"
+													id="selfCC"
+													value="xxx"
+												/>
+											</label>
+                                        <input class="input-submit" type="submit" name="sendContactEmail" id="sendContactEmail" value=" " />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                    <div id="form-right">
-                      <label for="message">Message</label><br />
-                      <textarea
-                        cols="50"
-                        name="message"
-                        rows=""
-                        id="message"
-                        class="textarea"
-                      ></textarea
-                      ><br /><br />
-                      <label for="selfCC">
-                        <!--<input type="checkbox" name="selfCC" id="selfCC" value="send" /> Send CC to self-->
-                        <input
-                          type="hidden"
-                          name="selfCC"
-                          id="selfCC"
-                          value="xxx"
-                        />
-                      </label>
-                      <input
-                        class="input-submit"
-                        type="submit"
-                        name="sendContactEmail"
-                        id="sendContactEmail"
-                        value=" "
-                      />
+                    <div class="form-box-bottom"></div>
+                </div>
+                <div id="sidebox">
+                    <div class="rightbar-content">
+                        <h3>Our Office</h3>
+                        <ul class="contact-list">
+                            <li class="first">
+                                <b>Block 7 Lot 2, BF Martinville, Canaynay
+										Avenue, Manuyo Dos Evacom, Las Piñas
+										<br />
+										City, Philippines 1740
+									</b>
+                            </li>
+                            <li>
+                                <strong>Phone:</strong
+									><font size="3">
+										(02) 8825 4776 &#8226; (02) 8356
+										2556</font
+									><br /><strong>Fax:</strong
+									><font size="3"> (20) 8829 4292</font>
+									<br /><strong>Email:</strong> newtop_corporation@yahoo.com info@newtopcorp.com
+                            </li>
+                        </ul>
                     </div>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-            <div class="form-box-bottom"></div>
-          </div>
-          <div id="sidebox">
-            <div class="rightbar-content">
-              <h3>Our Office</h3>
-              <ul class="contact-list">
-                <li class="first">
-                  <b
-                    >Block 7 Lot 2, BF Martinville, Canaynay Avenue, Manuyo Dos
-                    Evacom, Las Pi�as <br />
-                    City, Philippines 1740
-                  </b>
-                </li>
-                <li>
-                  <strong>Phone:</strong
-                  ><font size="3"> 541-6042 &#8226; 825-4776</font><br /><strong
-                    >Fax:</strong
-                  ><font size="3"> 829-4292</font> <br /><strong>Email:</strong>
-                  newtop_corporation@yahoo.com info@newtopcorp.com
-                </li>
-              </ul>
-            </div>
-            <div class="rightbar-content">
-              <h3>More About Us</h3>
-              <ul class="rightbar-list">
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="equipments.html">Our Equipments</a></li>
-                <li>
-                  <a href="employees.html">Our Employees</a
-                  ><img
-                    src="images/choose-icon1.jpg"
-                    alt=""
-                    class="choose-icon"
-                  />
-                </li>
-              </ul>
-            </div>
-            <div class="rightbar-content">
-              <h3>Why Choose Us</h3>
-              <img src="images/choose-icon2.jpg" alt="" class="choose-icon" />
-              <img src="images/choose-icon3.jpg" alt="" class="choose-icon" />
-            </div>
-          </div>
-        </div>
-        <!-- END CONTENT -->
-      </div>
-      <!-- BEGIN OF FOOTER -->
-      <div id="container-bottom">
-        <div id="footer">
-          <div class="left-footer">
-            <img src="images/footer-logo.png" alt="" class="footer-logo" />
-          </div>
-          <div class="right-footer">
-            <div class="social-network">
-              <div class="social-icon"></div>
-              <div class="follow"></div>
-              <div class="social-icon">
-                <a href="#"><img src="images/facebook.jpg" alt="" /></a>
-              </div>
-              <div class="follow">
-                <a href="#"><strong>Become a fan</strong></a> on Facebook
-              </div>
-            </div>
-            <div class="copyright">
-              Copyright � 2010 New Top Corp. All rights reserved. Hosted &
-              Design by:
-              <a href="http://www.netph.net" target="_blank">Netph.net</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END FOOTER -->
-    </div>
-  </body>
+                    <div class="rightbar-content">
+                        <h3>More About Us</h3>
+                        <ul class="rightbar-list">
+                            <li>
+                                <a href="services.html">Our Services</a>
+                            </li>
+                            <li>
+                                <a href="equipments.html">Our Equipments</a>
+                            </li>
+                            <li>
+                                <a href="employees.html">Our Employees</a
+									><img
+										src="images/choose-icon1.jpg"
+										alt=""
+										class="choose-icon"
+									/>
+								</li>
+							</ul>
+						</div>
+						<div class="rightbar-content">
+							<h3>Why Choose Us</h3>
+							<img
+								src="images/choose-icon2.jpg"
+								alt=""
+								class="choose-icon"
+							/>
+							<img
+								src="images/choose-icon3.jpg"
+								alt=""
+								class="choose-icon"
+							/>
+						</div>
+					</div>
+				</div>
+				<!-- END CONTENT -->
+			</div>
+			<!-- BEGIN OF FOOTER -->
+			<div id="container-bottom">
+				<div id="footer">
+					<div class="left-footer">
+						<img
+							src="images/footer-logo.png"
+							alt=""
+							class="footer-logo"
+						/>
+					</div>
+					<div class="right-footer">
+						<div class="social-network">
+							<div class="social-icon"></div>
+							<div class="follow"></div>
+							<div class="social-icon">
+								<a href="#"
+									><img src="images/facebook.jpg" alt=""
+								/></a>
+                    </div>
+                    <div class="follow">
+                        <a href="#"><strong>Become a fan</strong></a> on Facebook
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright � 2010 New Top Corp. All rights reserved. Hosted & Design by:
+                    <a href="http://www.netph.net" target="_blank">Netph.net</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END FOOTER -->
+		</div>
+	</body>
 </html>
